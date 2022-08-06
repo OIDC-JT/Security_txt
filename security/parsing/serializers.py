@@ -11,6 +11,7 @@ from .parsing import Parsing
 
 # 입력값을 받아 알고리즘을 사용하여 계산 후 결과 값 json으로 출력
 class ViruscountSerializer(serializers.Serializer):
+   username = JSONField
    hostname = serializers.SerializerMethodField(method_name='getHostname')
    virus = serializers.SerializerMethodField(method_name='getVirusList')
    virus_sum = serializers.SerializerMethodField(method_name='countVirus')
@@ -20,13 +21,13 @@ class ViruscountSerializer(serializers.Serializer):
       fields = ('hostname','virus','virus_sum')
 
    def getHostname(self, obj):
-      username = obj
+      username = obj['username']
       viruslist = []
       hostlist = hostlists(username)
       return hostlist
 
    def getVirusList(self, obj):
-      username = obj
+      username = obj['username']
       viruslist = []
       virusarray = []
       hostlist = hostlists(username)
@@ -36,7 +37,7 @@ class ViruscountSerializer(serializers.Serializer):
       return virusarray
 
    def countVirus(self, obj):
-      username = obj
+      username = obj['username']
       viruslist = []
       countlist = []
       hostlist = hostlists(username)
