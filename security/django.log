@@ -1,0 +1,44 @@
+*** Starting uWSGI 2.0.20 (64bit) on [Sat Aug  6 22:47:52 2022] ***
+compiled with version: 7.5.0 on 06 August 2022 13:28:33
+os: Linux-4.15.0-136-generic #140-Ubuntu SMP Thu Jan 28 05:20:47 UTC 2021
+nodename: django-proxy-server-acg03
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /root
+writing pidfile to /tmp/project-master.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/security
+your processes number limit is 15407
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /root/uwsgi.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.9 (default, Jun 29 2022, 11:45:57)  [GCC 8.4.0]
+PEP 405 virtualenv detected: /root/myvenv
+Set PythonHome to /root/myvenv
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55f5e20d4a00
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+Traceback (most recent call last):
+  File "./security/wsgi.py", line 12, in <module>
+    from django.core.wsgi import get_wsgi_application
+ModuleNotFoundError: No module named 'django'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 15283)
+spawned uWSGI worker 1 (pid: 15284, cores: 1)
