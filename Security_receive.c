@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
-#define PORT 10051
+#define PORT 51
 
 void error_handling(char *message);
 

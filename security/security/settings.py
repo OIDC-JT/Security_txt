@@ -53,8 +53,8 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ORIGIN ALLOW = True
-CORS_ORIGIN_WHITELIST = ('http://127.0.0.1:3000', 'http://localhost:3000')
+CORS_ORIGIN_ALLOW = True
+CORS_ORIGIN_WHITELIST = ('http://175.45.201.172:3001', 'http://localhost:3000')
 CORS_ALLOW_CREDENTIALS = True
 
 ROOT_URLCONF = 'security.urls'
